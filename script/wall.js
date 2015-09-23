@@ -1,5 +1,3 @@
-// const { default: axios } = require("axios");
-
 $("#logout").click(function () {
   //   window.location.href = "index.html";
   window.location.replace("login.html");
