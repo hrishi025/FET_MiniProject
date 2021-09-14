@@ -1,0 +1,126 @@
+{
+  "users": [
+    {
+      "user_id": 1,
+      "email": "h",
+      "password": "h"
+    },
+    {
+      "user_id": 2,
+      "email": "a",
+      "password": "a"
+    },
+    {
+      "user_id": 3,
+      "email": "u",
+      "password": "u"
+    }
+  ],
+  "images": [
+    {
+      "image_id": 1,
+      "title": "Autumn Foliage",
+      "description": "Picture by Alan",
+      "path": "images/1.jpg",
+      "category": "Trees",
+      "likes": 0
+    },
+    {
+      "image_id": 2,
+      "title": "Pink Tree",
+      "description": "Picture by Alan",
+      "path": "images/2.jpg",
+      "category": "Trees",
+      "likes": 0
+    },
+    {
+      "image_id": 3,
+      "title": "Green Leaves",
+      "description": "Picture by Mark",
+      "path": "images/3.jpg",
+      "category": "Trees",
+      "likes": 0
+    },
+    {
+      "image_id": 4,
+      "title": "Girl In Garden",
+      "description": "Picture by MIA",
+      "path": "images/4.jpg",
+      "category": "Beach",
+      "likes": 0
+    },
+    {
+      "image_id": 5,
+      "title": "Beach",
+      "description": "Picture by Drone",
+      "path": "images/5.jpg",
+      "category": "Beach",
+      "likes": 0
+    },
+    {
+      "image_id": 6,
+      "title": "Eve on Beach",
+      "description": "Picture by Alan",
+      "path": "images/6.jpg",
+      "category": "Beach",
+      "likes": 0
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "username": "Alan",
+      "comment": "nice picture",
+      "date": "13/09/2021"
+    },
+    {
+      "id": 2,
+      "image_id": 1,
+      "username": "Alan",
+      "comment": "best picture ever ",
+      "date": "13/09/2021"
+    },
+    {
+      "id": 3,
+      "image_id": 1,
+      "username": "Aditya",
+      "comment": "Tumchyasathi kay pn",
+      "date": "14/09/2021"
+    }
+  ],
+  "logs": [
+    {
+      "log_id": 1,
+      "image_name": "autmun foliage",
+      "type": "COMMENT",
+      "comment": "nice picture",
+      "date": "13/09/2021",
+      "user_id": 1
+    },
+    {
+      "log_id": 2,
+      "image_name": "autmun foliage",
+      "type": "COMMENT",
+      "comment": "best picture ever ",
+      "date": "13/09/2021",
+      "user_id": 1
+    },
+    {
+      "log_id": 3,
+      "image_name": "autmun foliage",
+      "type": "DOWNLOAD",
+      "comment": "-",
+      "date": "13/09/2021",
+      "user_id": 1
+    },
+    {
+      "log_id": 4,
+      "image_name": "autmun foliage",
+      "type": "COMMENT",
+      "comment": "Tumchyasathi kay pn",
+      "date": "14/09/2021",
+      "user_id": 1
+    }
+  ]
+}
