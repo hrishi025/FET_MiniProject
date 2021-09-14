@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Photo</title>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="../../css/comments.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/view.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <!--  -->
+    <div class="container">
+      <div class="heading">
+        <h3>View <span>Image</span></h3>
+      </div>
+
+      <div class="row">
+        <!-- page up  -->
+        <div class="row">
+          <img
+            id="view"
+            src="..."
+            style="width: auto; height: auto; margin: auto"
+          />
+        </div>
+
+        <!-- buttons -->
+        <div class="row" style="width: 60%; margin: auto; margin-top: 20px">
+          <div class="col">
+            <a>
+              <button
+                type="button"
+                class="btn btn-outline-danger w-75"
+                style="margin: 10px"
+              >
+                Like
+              </button>
+            </a>
+          </div>
+
+          <div class="col">
+            <a>
+              <button
+                type="button"
+                class="btn btn-outline-success w-75"
+                style="margin: 10px"
+              >
+                Share
+              </button>
+            </a>
+          </div>
+
+          <div class="col">
+            <a id="download" href="..." download>
+              <button
+                type="button"
+                class="btn btn-secondary w-75"
+                style="margin: 10px"
+              >
+                Download
+              </button></a
+            >
+          </div>
+        </div>
+
+        <!-- page down  -->
+        <div class="row" style="text-align: start; padding: 20px">
+          <div
+            class="row"
+            style="width: 60%; margin: auto; margin-bottom: 30px"
+          >
+            <h3>Comments</h3>
+          </div>
+
+          <!-- all fetched comments will be inserted here -->
+          <div id="insert_comments" class="row"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <footer id="footer"></footer>
+  </body>
+
+  <script src="../../script/view.js"></script>
+  <script src="../../script/common.js"></script>
+  <script src="../../script/comments.js"></script>
+</html>

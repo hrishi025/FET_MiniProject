@@ -1,0 +1,36 @@
+/* comment's rows */
+#comment_row {
+  width: 60%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#comment_row img {
+  width: auto;
+  height: 35px;
+  border-radius: 100px;
+}
+
+#comment_row h5 {
+  color: navy;
+}
+
+date {
+  color: dimgray;
+  font-size: small;
+}
+
+#comment_hr {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=comments.css.map */
