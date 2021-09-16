@@ -14,8 +14,11 @@
 }
 
 #comment_row img {
-  width: auto;
+  width: 35px;
   height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0%;
   border-radius: 100px;
 }
 

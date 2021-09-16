@@ -26,18 +26,19 @@ const fetchImages = async () => {
   );
 
   $("#cat").html(sessionStorage.getItem("category"));
-  $("#dream-1").html(insert_in_dream(arr1.filter(dream1)));
-  $("#dream-2").html(insert_in_dream(arr1.filter(dream2)));
-  $("#dream-3").html(insert_in_dream(arr1.filter(dream3)));
+  $(".dream").html(insert_in_dream(arr1));
+  // $("#dream").html(insert_in_dream(arr1.filter(dream1)));
+  // $("#dream-2").html(insert_in_dream(arr1.filter(dream3)));
+  // $("#dream-3").html(insert_in_dream(arr1.filter(dream2)));
 };
 function dream1(i) {
-  return i.image_id % 3 == 1;
+  return i.id % 3 == 1;
 }
 function dream2(i) {
-  return i.image_id % 3 == 2;
+  return i.id % 3 == 2;
 }
 function dream3(i) {
-  return i.image_id % 3 == 0;
+  return i.id % 3 == 0;
 }
 function insert_in_dream(array) {
   var output = "";
@@ -51,7 +52,7 @@ function insert_in_dream(array) {
       "</h1>  <p class='image_description'>" +
       array[i].description +
       "</p>  <br />  <button onclick='view(" +
-      array[i].image_id +
+      array[i].id +
       ")' style='color:white; border: 2px solid white; border-radius:50px' data-bs-toggle='modal' data-bs-target='#exampleModal'>view</button></div></div>";
     // console.log(output);
   }

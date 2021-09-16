@@ -42,11 +42,13 @@
           <div class="col">
             <a>
               <button
+                id="like"
                 type="button"
                 class="btn btn-outline-danger w-75"
                 style="margin: 10px"
               >
-                Like
+                Like -
+                <span id="view-likes"></span>
               </button>
             </a>
           </div>
@@ -85,6 +87,26 @@
             <h3>Comments</h3>
           </div>
 
+          <div
+            style="
+              width: 60%;
+              margin: auto;
+              margin-bottom: 30px;
+              text-align: right;
+            "
+          >
+            <p style="text-align: left">Comment :</p>
+            <textarea class="form-control" id="comment-box" rows="3"></textarea>
+            <button
+              id="add-comment"
+              type="button"
+              class="btn btn-success"
+              style="margin-top: 10px"
+            >
+              Add Comment
+            </button>
+          </div>
+
           <!-- all fetched comments will be inserted here -->
           <div id="insert_comments" class="row"></div>
         </div>
@@ -94,6 +116,8 @@
     <!--  -->
     <footer id="footer"></footer>
   </body>
+
+  <script type="url" src="../../script/url.js"></script>
 
   <script src="../../script/view.js"></script>
   <script src="../../script/common.js"></script>

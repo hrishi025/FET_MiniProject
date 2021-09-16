@@ -32,7 +32,9 @@ function insert_in_dream(array) {
 
   for (const i in array) {
     output +=
-      "<div class='image'><img class='image_img' src='images/1.jpg' /><div class='image_overlay' style='float: left'>  <h1 class='image_title'>" +
+      "<div class='image'><img class='image_img' src='https://source.unsplash.com/1080x720/?" +
+      array[i] +
+      "' /><div class='image_overlay' style='float: left'>  <h1 class='image_title'>" +
       array[i] +
       "</h1> <br />  <button onclick='view(\"" +
       array[i] +

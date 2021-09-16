@@ -16,15 +16,27 @@ const fetchCommets = async () => {
       alert(error);
     });
 
-  $("#insert_comments").html(insert_comments(array));
+  // console.log(array.filter(function (item) {
+  //   return item.image_id == sessionStorage.getItem("image_id");
+  // }));
+
+  $("#insert_comments").html(
+    display_comments(
+      array.filter(function (item) {
+        return item.image_id == sessionStorage.getItem("image_id");
+      })
+    )
+  );
 };
 
-function insert_comments(array) {
+function display_comments(array) {
   var output = "";
 
-  for (const i in array) {
+  for (var i in array) {
     output +=
-      "<div id='comment_row' class='row'><img src='images/user.png' /><div><h5>" +
+      "<div id='comment_row' class='row'><img src='https://source.unsplash.com/1600x900/?profilephoto,person," +
+      array[i].username +
+      "' /><div><h5>" +
       array[i].username +
       "</h5><date>" +
       array[i].date +

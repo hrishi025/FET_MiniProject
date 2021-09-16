@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>View Photo</title>
+    <title>View Logs</title>
 
-    <link rel="stylesheet" type="text/css" href="css/viewImage.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/view.css" />
 
     <!-- jQuery  -->
     <script
@@ -39,19 +39,8 @@
         <h3>View <span>LOGS</span></h3>
       </div>
 
-      <div style="width: 85%">
-        <table id="myTable" class="display">
-          <thead>
-            <tr>
-              <th>Sr. No.</th>
-              <th>Image Name</th>
-              <th>Type</th>
-              <th>Comment</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody id="insert_logs" style="text-align: left"></tbody>
-        </table>
+      <div style="width: 85%; margin-bottom: 200px">
+        <table id="myTable" class="display"></table>
       </div>
     </div>
 
@@ -60,11 +49,6 @@
   </body>
 
   <!-- scripts -->
-  <script src="script/common.js"></script>
-  <script src="script/log.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#myTable").DataTable();
-    });
-  </script>
+  <script src="../../script/common.js"></script>
+  <script src="../../script/log.js"></script>
 </html>

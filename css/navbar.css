@@ -9,7 +9,7 @@
   left: 0;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 30px;
   margin-left: 50px;
   cursor: pointer;
@@ -23,7 +23,7 @@
   background: rgba(235, 232, 232, 0.863);
   width: 200px;
   -webkit-box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
-  box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+          box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   visibility: hidden;
   opacity: 0;
@@ -98,7 +98,7 @@
   height: 20px;
   background: rgba(235, 232, 232, 0.863);
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+          transform: rotate(45deg);
   z-index: -1;
 }
 /*# sourceMappingURL=navbar.css.map */

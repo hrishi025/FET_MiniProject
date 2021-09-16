@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Photo</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/view.css" />
+
+    <!-- jQuery  -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <!--  -->
+    <div class="container" style="margin-bottom: 100px">
+      <div class="heading">
+        <h3>Upload <span>Photo</span></h3>
+      </div>
+
+      <!-- form -->
+      <div class="row" style="text-align: left; width: 100%">
+        <!-- left column -->
+        <div class="col-5">
+          <label class="form-label">Photo Title</label>
+          <input id="photo_title" type="text" class="form-control" /><br />
+
+          <label class="form-label">Photo Description</label>
+          <input id="photo_desc" type="text" class="form-control" /><br />
+
+          <label class="form-label">Photo Category</label>
+          <select
+            id="photo_category"
+            class="form-select"
+            aria-label="Default select example"
+          >
+            <option selected>None</option>
+            <option value="Trees">Trees</option>
+            <option value="Beach">Beach</option>
+            <option value="Animal">Animal</option></select
+          ><br />
+
+          <label class="form-label">Photo #tag</label>
+          <input
+            id="photo_hashtag"
+            type="text"
+            class="form-control"
+            placeholder="#photo"
+          /><br />
+
+          <input type="file" id="file" onchange="getImage(event)" />
+        </div>
+        <div class="col-1"></div>
+
+        <!-- right column -->
+        <div class="col-6" style="border: 1px solid black; text-align: center">
+          <img id="view-img-uploaded" width="100%" />
+          <p id="hide-after-show-image">uploaded image will appear hear</p>
+        </div>
+      </div>
+      <div class="row">
+        <button id="upload-photo" class="btn btn-primary" style="margin: 20px">
+          upload
+        </button>
+      </div>
+    </div>
+
+    <!--  -->
+    <footer id="footer"></footer>
+  </body>
+
+  <!-- scripts -->
+  <script src="../../script/common.js"></script>
+  <script src="../../script/upload.js"></script>
+</html>
