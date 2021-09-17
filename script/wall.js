@@ -1,5 +1,3 @@
-// const { default: axios } = require("axios");
-
 $("#logout").click(function () {
   //   window.location.href = "index.html";
   window.location.replace("login.html");
@@ -32,7 +30,7 @@ function insert_in_dream(array) {
 
   for (const i in array) {
     output +=
-      "<div class='image'><img class='image_img' src='https://source.unsplash.com/1080x720/?" +
+      "<div class='image'><img class='image_img' src='https://source.unsplash.com/350x400/?" +
       array[i] +
       "' /><div class='image_overlay' style='float: left'>  <h1 class='image_title'>" +
       array[i] +
