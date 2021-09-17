@@ -35,4 +35,8 @@
 h5 {
   margin-bottom: 0% !important;
 }
+
+#myTable {
+  max-width: 100%;
+}
 /*# sourceMappingURL=view.css.map */
