@@ -60,10 +60,6 @@ function search(result) {
         arr.push(result[i]);
     }
 
-    // const arr1 = arr.filter((obj) => obj.hash_tag == $("#search-text").val());
-
-    console.log(arr);
-
     $(".dream").html(insert_in_dream(arr));
   }
 }

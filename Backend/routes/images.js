@@ -12,9 +12,9 @@ const moment = require("moment");
 // router will be used to add routes in the app server
 const router = express.Router("");
 
-// get all comments
+// get all images
 router.get("/", (request, response) => {
-  fs.readFile("./data/comments.json", (err, jsonString) => {
+  fs.readFile("./data/images.json", (err, jsonString) => {
     if (err) {
       // console.log("File read failed:", err);
       response.send(err);
@@ -25,10 +25,10 @@ router.get("/", (request, response) => {
   });
 });
 
-// post new comment
+// post new images
 router.post("/", (request, response) => {
   // first get the json file
-  fs.readFile("./data/comments.json", (err, jsonString) => {
+  fs.readFile("./data/images.json", (err, jsonString) => {
     if (err) {
       // console.log("File read failed:", err);
       response.send(err);
@@ -36,13 +36,13 @@ router.post("/", (request, response) => {
     }
 
     //  parse the string
-    var users_arr = JSON.parse(jsonString);
+    var images_arr = JSON.parse(jsonString);
 
     // push the recieved data in array
-    users_arr.push(request.body);
+    images_arr.push(request.body);
 
     // upload the latest array in the json file
-    fs.writeFile("./data/users.json", JSON.stringify(users_arr), (err) => {
+    fs.writeFile("./data/users.json", JSON.stringify(images_arr), (err) => {
       if (err) {
         response.send("Error writing file", err);
       } else {

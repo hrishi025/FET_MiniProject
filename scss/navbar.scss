@@ -7,35 +7,30 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-/* font-family: 'Caveat', cursive; */
-body {
-  width: 100vw;
-  height: 100vh;
-  display: block;
-  overflow: hidden;
-  overflow-y: auto;
-  // background: rgb(240, 249, 255);
-}
+// body {
+//   width: 100vw;
+//   height: 100vh;
+//   display: block;
+//   overflow: hidden;
+//   overflow-y: auto;
+// }
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 60px;
-  background: black;
   box-shadow: 0 0 10px #2a2a2a;
   display: flex;
   z-index: 1000;
 
   .nav_btn {
     position: absolute;
-    top: 50%;
+    top: 18px;
     left: 15px;
     transform: translateY(-50%);
-    width: 35px;
-    height: 35px;
+    width: 60px;
     display: block;
-    background: #31363b;
     border-radius: 50%;
 
     span {
@@ -88,7 +83,6 @@ header .nav_btn.active span:nth-child(3) {
   height: 100vh;
   display: block;
   z-index: 999;
-  background: black;
   box-shadow: 0 0 20px black;
   transition: 0.5s;
 

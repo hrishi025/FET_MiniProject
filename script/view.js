@@ -82,14 +82,13 @@ $("#add-comment").click(function () {
     // create objects of comment as well as log
     var comment_obj = {
       image_id: view_obj.id,
-      username: "Jack",
+      username: JSON.parse(sessionStorage.getItem("user_login_info")).name,
       comment: comment,
       date: today,
     };
 
-    // TODO: CHANGE USERID FROM STATIC TO DYNAMIC
     var log_obj = {
-      user_id: 1,
+      user_id: JSON.parse(sessionStorage.getItem("user_login_info")).id,
       log_arr: [view_obj.title, "comment", comment, today],
     };
 

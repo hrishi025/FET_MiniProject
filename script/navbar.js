@@ -2,7 +2,6 @@ var btn = document.getElementById("navBtn");
 var Nav = document.getElementById("navigation");
 
 btn.addEventListener("click", function (e) {
-  debugger;
   switch (Nav.classList[1]) {
     case "active":
       e.target.classList.add("deactive");
