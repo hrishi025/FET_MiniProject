@@ -1,8 +1,3 @@
-$("#logout").click(function () {
-  //   window.location.href = "index.html";
-  window.location.replace("login.html");
-});
-
 const fetchImages = async () => {
   var array = [];
 
