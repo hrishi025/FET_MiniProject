@@ -10,15 +10,10 @@ const fetchCommets = async () => {
     .then((response) => {
       console.log(response.data);
       array = response.data;
-      //   sessionStorage.setItem("comments", JSON.stringify(array));
     })
     .catch((error) => {
       alert(error);
     });
-
-  // console.log(array.filter(function (item) {
-  //   return item.image_id == sessionStorage.getItem("image_id");
-  // }));
 
   $("#insert_comments").html(
     display_comments(

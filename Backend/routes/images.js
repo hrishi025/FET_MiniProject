@@ -42,7 +42,7 @@ router.post("/", (request, response) => {
     images_arr.push(request.body);
 
     // upload the latest array in the json file
-    fs.writeFile("./data/users.json", JSON.stringify(images_arr), (err) => {
+    fs.writeFile("./data/images.json", JSON.stringify(images_arr), (err) => {
       if (err) {
         response.send("Error writing file", err);
       } else {

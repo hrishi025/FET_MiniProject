@@ -22,3 +22,27 @@ btn.addEventListener("click", function (e) {
       break;
   }
 });
+
+$(document).ready(function () {
+  console.log();
+  if (sessionStorage.getItem("user_login_info") !== null) {
+    var name = JSON.parse(sessionStorage.getItem("user_login_info"))[0].name;
+    $("#user_name_nav").html(name.charAt(0).toUpperCase() + name.slice(1));
+  } else {
+    $("#user_name_nav").html("Guest");
+    $("ul.nav_menu > li:eq(2)").hide();
+    $("ul.nav_menu > li:eq(3)").hide();
+    $("ul.nav_menu > li:eq(4)").hide();
+    $("#like_a").html("");
+    $("#download").html("");
+    $("#comment_input").html(
+      "<div style='text-align:center'>Login to post Comment</div>"
+    );
+  }
+});
+
+$("#logout").click(function () {
+  sessionStorage.clear();
+  window.location.href = "home.html";
+  // window.location.replace("login.html");
+});

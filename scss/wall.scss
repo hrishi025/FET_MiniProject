@@ -133,3 +133,15 @@ h1 {
     }
   }
 }
+
+button {
+  padding: 8px 25px !important;
+  background: transparent !important;
+  outline: none !important;
+  border: 2px solid black;
+  border-radius: 20px !important;
+  color: black;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  cursor: pointer;
+}

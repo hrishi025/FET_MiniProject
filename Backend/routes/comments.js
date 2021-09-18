@@ -42,7 +42,7 @@ router.post("/", (request, response) => {
     users_arr.push(request.body);
 
     // upload the latest array in the json file
-    fs.writeFile("./data/users.json", JSON.stringify(users_arr), (err) => {
+    fs.writeFile("./data/comments.json", JSON.stringify(users_arr), (err) => {
       if (err) {
         response.send("Error writing file", err);
       } else {

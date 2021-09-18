@@ -11,11 +11,14 @@ const fetchLogs = async () => {
       console.log(response.data);
       array = response.data;
 
-      // TODO : CHANGE THE USER ID FROM STATIC TO DYNAMIC
       $("#myTable").DataTable({
         data: array
           .map((data) => {
-            if (data.user_id == 1) return data.log_arr;
+            if (
+              data.user_id ==
+              JSON.parse(sessionStorage.getItem("user_login_info"))[0].id
+            )
+              return data.log_arr;
           })
           .filter((data) => data != null),
         columns: [

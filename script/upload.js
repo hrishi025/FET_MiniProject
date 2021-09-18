@@ -38,7 +38,7 @@ $("#upload-photo").click(function () {
 
   // TODO: CHANGE USERID FROM STATIC TO DYNAMIC
   var log_obj = {
-    user_id: JSON.parse(sessionStorage.getItem("user_login_info")).id,
+    user_id: JSON.parse(sessionStorage.getItem("user_login_info"))[0].id,
     log_arr: [$("#photo_title").val(), "upload", "-", today],
   };
 

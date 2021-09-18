@@ -65,8 +65,13 @@
 
   <script>
     $(document).ready(function () {
-      let name = JSON.parse(sessionStorage.getItem("user_login_info"))[0].name;
-      $("#user_name").html(name.charAt(0).toUpperCase() + name.slice(1));
+      if (sessionStorage.getItem("user_login_info") !== null) {
+        let name = JSON.parse(sessionStorage.getItem("user_login_info"))[0]
+          .name;
+        $("#user_name").html(name.charAt(0).toUpperCase() + name.slice(1));
+      } else {
+        $("#user_name").html("Guest");
+      }
     });
   </script>
 </html>

@@ -23,12 +23,14 @@ header {
 
 header .nav_btn {
   position: absolute;
-  top: 18px;
+  top: 50%;
   left: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 60px;
+  width: 35px;
+  height: 35px;
   display: block;
+  background-color: #31363b;
   border-radius: 50%;
 }
 
@@ -89,6 +91,7 @@ header .nav_btn.active span:nth-child(3) {
   height: 100vh;
   display: block;
   z-index: 999;
+  background-color: #212529;
   -webkit-box-shadow: 0 0 20px black;
           box-shadow: 0 0 20px black;
   -webkit-transition: 0.5s;
@@ -276,7 +279,6 @@ header .nav_btn.active span:nth-child(3) {
   max-width: 300px;
   height: 100vh;
   display: block;
-  background-image: url("../images/180817.jpg");
   opacity: 0.7;
   background-position: center;
   background-size: cover;

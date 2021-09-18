@@ -1,7 +1,6 @@
 const url = "http://localhost:3000/";
 
 $(document).ready(function () {
-  // console.log(sessionStorage.getItem("image_id"));
   fetchImages();
 });
 
@@ -82,13 +81,13 @@ $("#add-comment").click(function () {
     // create objects of comment as well as log
     var comment_obj = {
       image_id: view_obj.id,
-      username: JSON.parse(sessionStorage.getItem("user_login_info")).name,
+      username: JSON.parse(sessionStorage.getItem("user_login_info"))[0].name,
       comment: comment,
       date: today,
     };
 
     var log_obj = {
-      user_id: JSON.parse(sessionStorage.getItem("user_login_info")).id,
+      user_id: JSON.parse(sessionStorage.getItem("user_login_info"))[0].id,
       log_arr: [view_obj.title, "comment", comment, today],
     };
 

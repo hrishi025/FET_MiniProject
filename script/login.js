@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  if (sessionStorage.getItem("user_login_info") !== null) {
+    console.log("redirect");
+    window.location.href = "search.html";
+  }
+
   $("#submit").click(function () {
     event.preventDefault();
     let emailId = $("#username").val();
