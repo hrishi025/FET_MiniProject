@@ -25,7 +25,7 @@ today = dd + "/" + mm + "/" + yyyy;
 
 // on clicking upload button
 $("#upload-photo").click(function () {
-  console.log("uploaded");
+  // console.log("uploaded");
 
   var body = {
     title: $("#photo_title").val(),

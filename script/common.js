@@ -11,7 +11,3 @@ $(function () {
     $("head").append(data);
   });
 });
-
-// (data) => {
-//   $("#navbar").append(data);
-// };

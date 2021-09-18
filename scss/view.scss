@@ -1,25 +1,32 @@
+h1 {
+  display: block !important;
+  font-size: 2em !important;
+  font-weight: bold !important;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 40px 20px 0 20px;
-}
+  margin: 40px 20px 80px 20px;
 
-.container .heading {
-  width: 50%;
-  padding-bottom: 50px;
-}
-.container .heading h3 {
-  font-size: 3em;
-  font-weight: bolder;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #222;
-}
+  .heading {
+    width: 50%;
+    padding-bottom: 50px;
 
-.container .heading h3 span {
-  font-weight: 100;
+    h3 {
+      font-size: 3em;
+      font-weight: bolder;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #222;
+
+      span {
+        font-weight: 100;
+      }
+    }
+  }
 }
 
 h5 {

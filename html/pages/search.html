@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Images</title>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- for search bar -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../../css/view.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/search.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <div class="container">
+      <div class="heading" style="padding: 0%">
+        <h3>Welcome <span id="user_name"></span></h3>
+      </div>
+    </div>
+
+    <!-- search bar div -->
+    <div id="search-bar-div">
+      <h3>You can start searching photos</h3>
+      <p style="font-family: cursive">No need to use # in search</p>
+      <br />
+      <form>
+        <input
+          id="search-text"
+          type="search"
+          style="width: 60%; margin: auto"
+          onkeyup="search(JSON.parse(sessionStorage.getItem('all_images')))"
+        />
+        <i class="fa fa-search"></i>
+      </form>
+    </div>
+
+    <!-- searched images will appear here -->
+    <div class="container">
+      <div class="custom-box">
+        <div class="dream"></div>
+      </div>
+    </div>
+
+    <!--  -->
+    <footer id="footer"></footer>
+  </body>
+
+  <!-- scripts -->
+  <script src="../../script/search.js"></script>
+  <script src="../../script/common.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      let name = JSON.parse(sessionStorage.getItem("user_login_info"))[0].name;
+      $("#user_name").html(name.charAt(0).toUpperCase() + name.slice(1));
+    });
+  </script>
+</html>

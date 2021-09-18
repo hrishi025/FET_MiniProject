@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/home.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <section class="title">
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-expand-lg navbar-dark ">
+                <a href="" class="navbar-brand">Picaso</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerContent" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerContent">
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link"><b>SignIn</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#footer" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#footer" class="nav-link">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Banner -->
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <h1><b>Welcome to the photo platform for pros.</b></h1>
+
+                    <button type="button" class="btn btn-outline-light btn-lg banner-button" onclick="window.location.href = 'login.html'"><i
+                            class="fas fa-sign-in-alt"></i>Sign Up</button>
+                </div>
+
+                <div class="col-lg-6">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------->
+
+
+    <section class="title2">
+        <div class="container-fluid2">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="col-lg-8">
+                        <h3>Manage your images</h3>
+                        <p>At the heart of Digital Photo Gallery is an incredibly powerful image management system for
+                            full
+                            resolution images.
+                            Whether you are a photographer with thousands of images, a team working together or an
+                            organisation with
+                            a huge archive, DPG is built for you.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./home-images/bh1.jpg" class="d-block w-100" alt="..." width="460" height="300">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./home-images/bh2.jpg" class="d-block w-100" alt="..." width="460" height="300">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./home-images/bh3.jpg" class="d-block w-100" alt="..." width="460" height="300">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+
+
+
+    <!---------------------------------------------------------------------------------------->
+
+    <section class="title3">
+        <div class="container-fluid3">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div id="carouselVideoExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+
+
+                        <div class="carousel-inner">
+                            <!-- Single item -->
+                            <div class="carousel-item active">
+                                <video class="img-fluid" autoplay loop muted>
+                                    <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+                                </video>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5></h5>
+                                    <p>
+                                        Nulla vitae elit libero, a pharetra augue mollis interdum.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="carousel-inner">
+                        <div class="col-lg-10">
+                            <h3>Built for every device</h3>
+                            <p>From phone to 5K display, every aspect of DPG is optimised to work on all kinds of
+                                devices.
+
+                                Seamlessly switch between desktop and mobile, the DPG admin system adapts to the screen
+                                size you are using. One system that works everywhere.
+
+                                All our website templates are responsive and built to modern standards, so your work
+                                will always look its best.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!---------------------------------------------------------------------------------------->
+    <section id="features">
+        <div class="row">
+            <div class="feature-container col-lg-4">
+                <h3>Easy to use.</h3>
+                <p>
+                    The easy way for photographers to share, delivernd and download</p>
+            </div>
+
+            <div class="feature-container col-lg-4">
+                <h3>High Quality Images</h3>
+                <p>We have all the Images, in the greatest Quality.</p>
+            </div>
+
+            <div class="feature-container col-lg-4">
+                <h3>Various Categories</h3>
+                <p>Find the Image you want from the Categories.</p>
+
+
+            </div>
+    </section>
+    <hr>
+
+    <section id="pricing">
+        <h1>
+            What else can you do with Picaso?
+        </h1>
+        <div class="row" style="color: white;">
+            <div class="feature-container col-lg-4">
+                <div class="container1">
+
+                    <div class="center1">
+                        <a style="font-size:200%;">Keep Photos safe.</a>
+
+
+                    </div>
+
+                    <div class="bottom1">
+                        <ul style="font-size:150%;">
+                            <li>Unlimited storage</li>
+                            <li>Privacy Controls</li>
+                            <li>No compression</li>
+                            <li>Automatic upload</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-container col-lg-4">
+                <div class="container2">
+
+                    <div class="center2">
+                        <a style="font-size:200%;">Manage RAW files</a>
+
+
+                    </div>
+
+                    <div class="bottom2">
+                        <ul style="font-size:150%;">
+                            <li>Storage that grows with you</li>
+                            <li>Searchable archive</li>
+                            <li>Simple oranizing tools</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-container col-lg-4">
+                <div class="container3">
+
+                    <div class="center3">
+                        <a style="font-size:200%;">Unlimited download.</a>
+
+
+                    </div>
+
+                    <div class="bottom3">
+                        <ul style="font-size:150%;">
+                            <li>Unlimited storage</li>
+                            <li>Privacy Controls</li>
+                            <li>No compression</li>
+                            <li>Automatic upload</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!----------------------------------------------------------------------------------------------->
+
+    <section id="cta">
+        <div class="cta1" style="color:black">
+            <h1>Save every shot.</h1>
+            <h3 style="color:rgb(95, 91, 91)">
+                Every photographer needs a secure, reliable place to store their photos. You found the best around.
+            </h3>
+         
+            <div class="d-flex justify-content-around">
+                <div class="p-2 bd-highlight"><i class="fa fa-lock" aria-hidden="true"></i>
+                    <h6>Privacy controls</h6>
+                </div>
+                <div class="p-2 bd-highlight"><i class="fa fa-indent" aria-hidden="true"></i>
+                    <h6>No compression</h6>
+                </div>
+                <div class="p-2 bd-highlight"><i class="fa fa-archive" aria-hidden="true"></i>
+                    <h6>Unlimited Storage</h6>
+                </div>
+                <div class="p-2 bd-highlight"><i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                    <h6>Automatic upload</h6>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="title4">
+        <h2>What our users are saying</h2>
+        <div class="row" style="color: black;">
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1" style="color: black"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2" style="color: black"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3" style="color: black"></button>
+                </div>
+                <div class="carousel-inner" style="color: rgb(95, 90, 90);">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="feature-container col-lg-6">
+
+
+                                <p>"How I LOVE what Picaso has done for the ease
+                                    of my business! My clients always
+                                    love their galleries."</p>
+                                <img src="./home-images/dab.jpg" alt="dab" style="width:50px">
+                                <h5>Dabboo Ratnani</h5>
+                            </div>
+                            <div class="feature-container col-lg-6">
+
+                                <p> "We love using Picaso for delivering client images.
+                                    Their new range of social media buttons makes it even easier
+                                    for you to engage with your audiences on all platforms!"</p>
+                                <img src="./home-images/arun-profile.jpg" alt="ceo" style="width:50px">
+                                <h5>Arun Nathani</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="feature-container col-lg-6">
+
+
+                                <p>
+                                    "I just started using Picaso and I'm STOKED!!
+                                    My client's proofs are gonna look great + easy ordering!
+                                    #photography #proofing #gallery"
+                                </p>
+                                <img src="./home-images/daya.jfif" alt="daya" style="width:50px">
+                                <h5>Dayanita Singh</h5>
+                            </div>
+                            <div class="feature-container col-lg-6">
+
+
+                                <p>
+                                    "I can't wait to switch to Picaso this year!!
+                                    I commend you guys for listening to photographers and coming up
+                                    with a really really great set up for us and our clients!!!!! THANKS!!"</p>
+                                <img src="./home-images/sanjeev.jfif" alt="daya" style="width:50px">
+                                <h5>sanjeev kapoor</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="feature-container col-lg-6">
+
+
+                                <p>
+                                    "Super excited to see where this ends up.
+                                    Picaso has fast become my absolute favorite way to share photos
+                                    with my clients!"</p>
+                                <img src="./home-images/ran.jpg" alt="ran" style="width:50px">
+                                <h5>Ranveer Brar</h5>
+                            </div>
+                            <div class="feature-container col-lg-6">
+
+
+                                <p>
+                                    "I absolutely LOVE these new options! I delivered a few galleries today and really
+                                    felt like this was a major "wow" factor."</p>
+                                <img src="./home-images/Ritu_Nathani1.jpg" alt="ritu" style="width:50px">
+                                <h5>Ritu Nathani</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <div class="row">
+
+        <div class="pricing-column col-lg-4 col-md-6">
+            <!-- footer -->
+            <footer id="footer">
+                <i class="media-icons fab fa-twitter"></i>
+                <i class="media-icons fab fa-instagram"></i>
+                <i class="media-icons fab fa-facebook-f"></i>
+                <i class="media-icons fas fa-envelope"></i>
+                <p>&copy 2021 Picaso</p>
+
+            </footer>
+
+            <script src="../js/formtoggle.js"></script>
+</body>
+
+</html>

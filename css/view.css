@@ -1,3 +1,9 @@
+h1 {
+  display: block !important;
+  font-size: 2em !important;
+  font-weight: bold !important;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,7 +19,7 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin: 40px 20px 0 20px;
+  margin: 40px 20px 80px 20px;
 }
 
 .container .heading {

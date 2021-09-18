@@ -1,0 +1,233 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.title {
+  background-image: url("../html/pages/home-images/bh0.jpg");
+  background-size: 100% 100%;
+  color: rgb(15, 8, 8);
+  .container-fluid {
+    padding: 3% 2%;
+  }
+  .container-fluid2 {
+    margin-top: 20px;
+    padding: 3% 2%;
+  }
+  .container-fluid3 {
+    margin-top: 20px;
+    padding: 5% 2%;
+  }
+}
+.title2 {
+  background-color: #f6f8f8;
+  padding: 3% 2%;
+  margin-top: 30px;
+  color: rgb(15, 8, 8);
+}
+.title3 {
+  background-color: #f6f8f8;
+  padding: 3% 2%;
+  margin-top: 30px;
+  color: rgb(15, 8, 8);
+}
+.carousel-inner {
+  padding: 3% 2%;
+}
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+p {
+  color: #8f8f8f;
+}
+#footer {
+  padding: 7% 15%;
+  text-align: center;
+}
+.navbar {
+  padding-bottom: 0 0 4.5rem;
+}
+.navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.nav-item {
+  padding: 0 18px;
+}
+.nav-link {
+  font-size: 1.5rem;
+  font-family: #08c9eb;
+}
+.banner-button {
+  margin: 5% 6% 15% 0;
+}
+.title-image {
+  width: 80%;
+  transform: rotate(20deg);
+  right: 10%;
+}
+.manage {
+  padding: 2% 25%;
+  background-color: #fff;
+  position: relative;
+}
+#features {
+  padding: 7% 5%;
+  background-color: cyan;
+  background-image: url("../html/pages/home-images/bh4.jfif");
+  background-size: 100% 100%;
+  position: relative;
+  margin-top: 30px;
+  .feature-container {
+    text-align: center;
+    padding: 2%;
+  }
+}
+#pricing {
+  padding: 25px;
+  text-align: center;
+  background-color: #f6f8f8;
+  .pricing-column {
+    padding: 3% 3%;
+  }
+}
+#cta {
+  margin-top: 30px;
+  background-color: #f6f8f8;
+  color: #fff;
+  padding: 3% 3%;
+  padding: 25px;
+  text-align: center;
+}
+#title4 {
+  margin-top: 30px;
+  padding: 25px;
+  padding: 3% 2%;
+  height: 80%;
+  text-align: center;
+  background-image: url("../html/pages/home-images/one.jfif");
+  background-color: #f6f8f8;
+  background-size: 100% 100%;
+}
+.cta-heading {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+.media-icons {
+  margin: 20px 10px;
+  height: 80%;
+  text-decoration: none;
+}
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  border: 1px solid #000;
+  background-image: url("../html/pages/home-images/bh5.jpg");
+  background-size: auto;
+  &:hover {
+    .center1 {
+      margin-top: 20px;
+    }
+    .bottom1 {
+      opacity: 1;
+      visibility: visible;
+      margin-bottom: 20px;
+      transform: translateY(0);
+    }
+  }
+}
+.center1 {
+  margin-top: 150px;
+  transition: all 0.4s ease-in-out;
+}
+.bottom1 {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: all 0.4s ease-in-out;
+}
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  border: 1px solid #000;
+  background-image: url("../html/pages/home-images/bh6.jpg");
+  background-size: 100% 100%;
+  &:hover {
+    .center2 {
+      margin-top: 20px;
+    }
+    .bottom2 {
+      opacity: 1;
+      visibility: visible;
+      margin-bottom: 20px;
+      transform: translateY(0);
+    }
+  }
+}
+.center2 {
+  margin-top: 150px;
+  transition: all 0.4s ease-in-out;
+}
+.bottom2 {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: all 0.4s ease-in-out;
+}
+.container3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  border: 1px solid #000;
+  background-image: url("../html/pages/home-images/bh7.jpg");
+  background-size: 100% 100%;
+  &:hover {
+    .center3 {
+      margin-top: 20px;
+    }
+    .bottom3 {
+      opacity: 1;
+      visibility: visible;
+      margin-bottom: 20px;
+      transform: translateY(0);
+    }
+  }
+}
+.center3 {
+  margin-top: 150px;
+  transition: all 0.4s ease-in-out;
+}
+.bottom3 {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: all 0.4s ease-in-out;
+}
+@media (max-width: 1180px) {
+  #title {
+    text-align: center;
+  }
+  .title-image {
+    position: static;
+    transform: rotate(25);
+  }
+}
