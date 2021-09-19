@@ -49,21 +49,21 @@ $(document).ready(function () {
     var userpass = document.querySelector("#userPass").value;
     var passPattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
     var passMatch = passPattern.test(userpass);
-    if (nameMatch == true) {
+    if (nameMatch === true) {
       var user_name = uName;
       $("#name-error").hide();
     } else {
       $("#name-error").show();
       $("#name-error").html("Use only text in name");
     }
-    if (emailMatch == true) {
+    if (emailMatch === true) {
       var email = emailphone;
       $("#email-error").hide();
     } else {
       $("#email-error").show();
       $("#email-error").html("Invalid email");
     }
-    if (passMatch == true) {
+    if (passMatch === true) {
       $("#password-error").hide();
       var pass = userpass;
     } else {
