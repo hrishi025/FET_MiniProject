@@ -1,3 +1,5 @@
+const { Session } = require("inspector");
+
 function getImage(event) {
   var file = document.getElementById("file").files[0];
   var reader = new FileReader();
@@ -43,7 +45,7 @@ $("#upload-photo").click(function () {
     .post("http://localhost:3000/images/", body, {
       "Content-Type": "application/json",
     })
-    .then((response) => {
+    .then(() => {
       // insert log
       axios
         .post("http://localhost:3000/logs", log_obj, {

@@ -5,11 +5,13 @@ $(document).ready(function () {
 
   $("#submit").click(function () {
     event.preventDefault();
-    let emailId = $("#username").val();
-    let pass = $("#password").val();
-    let url = new URL("http://localhost:3000/user");
+    const emailId = $("#username").val();
+    const pass = $("#password").val();
+    const url = new URL("http://localhost:3000/user");
+
     url.searchParams.append("username", emailId);
     url.searchParams.append("password", pass);
+
     $.ajax({
       type: "GET",
       url: url,
@@ -24,7 +26,6 @@ $(document).ready(function () {
           $("#form-status-1").html("Invalid Credentials");
         }
       },
-      error: function (err) {},
     });
   });
 
