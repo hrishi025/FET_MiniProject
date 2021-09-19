@@ -17,7 +17,7 @@ $(document).ready(function () {
       processData: false,
       contentType: "application/json",
       success: function (response) {
-        if (response.length != 0) {
+        if (response.length !== 0) {
           sessionStorage.setItem("user_login_info", JSON.stringify(response));
           window.location.href = "search.html";
         } else {
@@ -30,16 +30,14 @@ $(document).ready(function () {
 
   $("#add").click(function () {
     event.preventDefault();
-    let name = document.querySelector("#name").value;
-    let uemail = document.querySelector("#userEmail").value;
-    let uname = document.querySelector("#userName").value;
-    let password = document.querySelector("#userPass").value;
+
     var object = {
-      name: name,
-      email: uemail,
-      username: uname,
-      password: password,
+      name: document.querySelector("#name").value,
+      email: document.querySelector("#userEmail").value,
+      username: document.querySelector("#userName").value,
+      password: document.querySelector("#userPass").value,
     };
+
     var uName = document.querySelector("#name").value;
     var namePattern = /^[A-Za-z]+$/;
     var nameMatch = namePattern.test(uName);
@@ -49,15 +47,14 @@ $(document).ready(function () {
     var userpass = document.querySelector("#userPass").value;
     var passPattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
     var passMatch = passPattern.test(userpass);
+
     if (nameMatch === true) {
-      var user_name = uName;
       $("#name-error").hide();
     } else {
       $("#name-error").show();
       $("#name-error").html("Use only text in name");
     }
     if (emailMatch === true) {
-      var email = emailphone;
       $("#email-error").hide();
     } else {
       $("#email-error").show();
@@ -65,7 +62,6 @@ $(document).ready(function () {
     }
     if (passMatch === true) {
       $("#password-error").hide();
-      var pass = userpass;
     } else {
       $("#password-error").show();
       $("#password-error").html(
