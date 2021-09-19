@@ -1,5 +1,3 @@
-const { Session } = require("inspector");
-
 function getImage(event) {
   var file = document.getElementById("file").files[0];
   var reader = new FileReader();
@@ -52,13 +50,18 @@ $("#upload-photo").click(function () {
         .post("http://localhost:3000/logs", log_obj, {
           "Content-Type": "application/json",
         })
-        .catch((error) => {
-          alert("while inserting log: " + error);
+        .catch(() => {
+          $("#upload-photo-error-div").show();
         });
 
       window.location.href = "./categories.html";
     })
-    .catch((error) => {
-      alert(error);
+    .catch(() => {
+      $("#upload-photo-error-div").show();
     });
+});
+
+// when page gets loaded
+$(document).ready(() => {
+  $("#upload-photo-error-div").hide();
 });
