@@ -30,7 +30,7 @@ $("#upload-photo").click(function () {
     description: $("#photo_desc").val(),
     path: $("#view-img-uploaded").attr("src"),
     category: $("#photo_category option:selected").text(),
-    hash_tag: $("#photo_hashtag").val(),
+    hash_tag: "#" + $("#photo_hashtag").val(),
     likes: 0,
   };
 

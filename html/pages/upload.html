@@ -66,12 +66,21 @@
           ><br />
 
           <label class="form-label">Photo #tag</label>
-          <input
-            id="photo_hashtag"
-            type="text"
-            class="form-control"
-            placeholder="#photo"
-          /><br />
+          <br />
+          <div class="row">
+            <div class="col-1" style="padding: 5px; text-align: center">
+              <strong> # -</strong>
+            </div>
+            <div class="col-11">
+              <input
+                id="photo_hashtag"
+                type="text"
+                class="form-control"
+                placeholder="tag"
+              />
+            </div>
+          </div>
+          <br />
 
           <input type="file" id="file" onchange="getImage(event)" />
         </div>

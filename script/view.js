@@ -96,7 +96,9 @@ const like = async (obj) => {
         description: obj.description,
         path: obj.path,
         category: obj.category,
+        hash_tag: obj.hash_tag,
         likes: parseInt(obj.likes) + 1,
+        user_id: obj.user_id,
       },
       { "Content-Type": "application/json" }
     )
@@ -124,11 +126,14 @@ function unlike(log_id) {
   var obj = JSON.parse(sessionStorage.getItem("view"));
 
   const img_obj = {
+    id: obj.id,
     title: obj.title,
     description: obj.description,
     path: obj.path,
     category: obj.category,
+    hash_tag: obj.hash_tag,
     likes: parseInt(obj.likes) - 1,
+    user_id: obj.user_id,
   };
 
   axios

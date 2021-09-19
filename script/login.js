@@ -39,15 +39,10 @@ $(document).ready(function () {
       password: document.querySelector("#userPass").value,
     };
 
-    var uName = document.querySelector("#name").value;
+    // check name validation
+    var name = document.querySelector("#name").value;
     var namePattern = /^[A-Za-z]+$/;
-    var nameMatch = namePattern.test(uName);
-    var emailphone = document.querySelector("#userEmail").value;
-    var mailPattern = /^(^[A-Za-z0-9]+@+[A-Za-z]+.+([A-Za-z])$)$/;
-    var emailMatch = mailPattern.test(emailphone);
-    var userpass = document.querySelector("#userPass").value;
-    var passPattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-    var passMatch = passPattern.test(userpass);
+    var nameMatch = namePattern.test(name);
 
     if (nameMatch === true) {
       $("#name-error").hide();
@@ -55,12 +50,24 @@ $(document).ready(function () {
       $("#name-error").show();
       $("#name-error").html("Use only text in name");
     }
+
+    // check email validation
+    var email = document.querySelector("#userEmail").value;
+    var mailPattern = /^(^[A-Za-z0-9]+@+[A-Za-z]+.+([A-Za-z])$)$/;
+    var emailMatch = mailPattern.test(email);
+
     if (emailMatch === true) {
       $("#email-error").hide();
     } else {
       $("#email-error").show();
       $("#email-error").html("Invalid email");
     }
+
+    // check password validation
+    var userpass = document.querySelector("#userPass").value;
+    var passPattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    var passMatch = passPattern.test(userpass);
+
     if (passMatch === true) {
       $("#password-error").hide();
     } else {
@@ -69,15 +76,16 @@ $(document).ready(function () {
         "Password must contain: 1 letter caps, 1 letter small, 1 number, 1 special character"
       );
     }
-    event.preventDefault();
+
+    // event.preventDefault();
+
     if (
       nameMatch !== false &&
       passMatch !== false &&
       emailMatch !== false &&
       name.length !== 0 &&
-      uemail.length !== 0 &&
-      uname.length !== 0 &&
-      password.length !== 0
+      email.length !== 0 &&
+      userpass.length !== 0
     ) {
       $.ajax({
         type: "POST",
