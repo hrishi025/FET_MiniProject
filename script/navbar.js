@@ -27,6 +27,7 @@ $(document).ready(function () {
   if (sessionStorage.getItem("user_login_info") !== null) {
     var name = JSON.parse(sessionStorage.getItem("user_login_info"))[0].name;
     $("#user_name_nav").html(name.charAt(0).toUpperCase() + name.slice(1));
+    $(".login").hide();
   } else {
     $("#user_name_nav").html("Guest");
     $("ul.nav_menu > li:eq(2)").hide();
@@ -37,6 +38,7 @@ $(document).ready(function () {
     $("#comment_input").html(
       "<div style='text-align:center'>Login to post Comment</div>"
     );
+    $(".logout").hide();
   }
 });
 
