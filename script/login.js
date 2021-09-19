@@ -1,6 +1,5 @@
 $(document).ready(function () {
   if (sessionStorage.getItem("user_login_info") !== null) {
-    console.log("redirect");
     window.location.href = "search.html";
   }
 
@@ -25,9 +24,7 @@ $(document).ready(function () {
           alert("Enter correct credentials");
         }
       },
-      error: function (err) {
-        console.log(err);
-      },
+      error: function (err) {},
     });
   });
 
@@ -54,7 +51,6 @@ $(document).ready(function () {
     var passMatch = passPattern.test(userpass);
     if (nameMatch == true) {
       var user_name = uName;
-      console.log(user_name);
     } else {
       alert("Use only text in name");
     }
@@ -85,11 +81,10 @@ $(document).ready(function () {
         dataType: "json",
         contentType: "application/json",
         success: function (response) {
-          console.log("Registered successfully");
           alert("Registered successfully");
         },
         error: function (error) {
-          console.log(error);
+          alert(error);
         },
       });
     } else {

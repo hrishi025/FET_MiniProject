@@ -8,7 +8,6 @@ const fetchLogs = async () => {
   await axios
     .get("http://localhost:3000/logs")
     .then((response) => {
-      console.log(response.data);
       array = response.data;
 
       $("#myTable").DataTable({

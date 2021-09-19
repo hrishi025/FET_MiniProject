@@ -4,7 +4,6 @@ const fetchImages = async () => {
   await axios
     .get("http://localhost:3000/images/")
     .then((response) => {
-      console.log(response.data);
       array = response.data;
       sessionStorage.setItem("all_images", JSON.stringify(array));
     })
@@ -15,7 +14,6 @@ const fetchImages = async () => {
   var arr = array
     .map((item) => item.category)
     .filter((value, index, self) => self.indexOf(value) === index);
-  console.log(arr);
 
   $(".dream").html(insert_in_dream(arr));
 };
@@ -32,7 +30,6 @@ function insert_in_dream(array) {
       "</h1> <br />  <button onclick='view(\"" +
       array[i] +
       "\")' style='color:white; border: 2px solid white; border-radius:50px' data-bs-toggle='modal' data-bs-target='#exampleModal'>view</button></div></div>";
-    console.log(array[i]);
   }
   return output;
 }
@@ -40,7 +37,6 @@ function insert_in_dream(array) {
 $(document).ready(fetchImages);
 
 function view(category) {
-  console.log("cat:" + category);
   sessionStorage.setItem("category", category);
   window.location.href = "photos.html";
 }

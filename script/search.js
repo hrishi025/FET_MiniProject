@@ -1,7 +1,4 @@
-// const { default: axios } = require("axios");
-
 $("#logout").click(function () {
-  //   window.location.href = "index.html";
   window.location.replace("login.html");
 });
 
@@ -11,7 +8,6 @@ const fetchImages = async () => {
   await axios
     .get("http://localhost:3000/images/")
     .then((response) => {
-      console.log(response.data);
       array = response.data;
       sessionStorage.setItem("all_images", JSON.stringify(array));
     })
@@ -62,9 +58,4 @@ function search(result) {
 
     $(".dream").html(insert_in_dream(arr));
   }
-}
-
-function fil(obj) {
-  console.log(obj.hash_tag);
-  console.log(obj);
 }

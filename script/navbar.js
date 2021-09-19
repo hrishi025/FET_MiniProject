@@ -24,7 +24,6 @@ btn.addEventListener("click", function (e) {
 });
 
 $(document).ready(function () {
-  console.log();
   if (sessionStorage.getItem("user_login_info") !== null) {
     var name = JSON.parse(sessionStorage.getItem("user_login_info"))[0].name;
     $("#user_name_nav").html(name.charAt(0).toUpperCase() + name.slice(1));

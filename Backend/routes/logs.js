@@ -16,11 +16,10 @@ const router = express.Router("");
 router.get("/", (request, response) => {
   fs.readFile("./data/logs.json", (err, jsonString) => {
     if (err) {
-      console.log("File read failed:", err);
       response.send(err);
       return;
     }
-    console.log("File data:", jsonString);
+
     response.send(jsonString);
   });
 });
@@ -30,7 +29,6 @@ router.post("/", (request, response) => {
   // first get the json file
   fs.readFile("./data/logs.json", (err, jsonString) => {
     if (err) {
-      console.log("File read failed:", err);
       response.send(err);
       return;
     }

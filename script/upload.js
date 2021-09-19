@@ -3,7 +3,6 @@ function getImage(event) {
   var reader = new FileReader();
 
   reader.onload = function (e) {
-    console.log(e.target.result);
     $("#view-img-uploaded").attr("src", e.target.result);
     $("#hide-after-show-image").hide();
   };
@@ -25,8 +24,6 @@ today = dd + "/" + mm + "/" + yyyy;
 
 // on clicking upload button
 $("#upload-photo").click(function () {
-  // console.log("uploaded");
-
   var body = {
     title: $("#photo_title").val(),
     description: $("#photo_desc").val(),
@@ -36,7 +33,6 @@ $("#upload-photo").click(function () {
     likes: 0,
   };
 
-  // TODO: CHANGE USERID FROM STATIC TO DYNAMIC
   var log_obj = {
     user_id: JSON.parse(sessionStorage.getItem("user_login_info"))[0].id,
     log_arr: [$("#photo_title").val(), "upload", "-", today],
@@ -52,9 +48,6 @@ $("#upload-photo").click(function () {
       axios
         .post("http://localhost:3000/logs", log_obj, {
           "Content-Type": "application/json",
-        })
-        .then((response) => {
-          console.log(response.data);
         })
         .catch((error) => {
           alert("while inserting log: " + error);

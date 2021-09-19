@@ -8,15 +8,12 @@ const fetchImages = async () => {
   await axios
     .get("http://localhost:3000/images/")
     .then((response) => {
-      console.log(response.data);
       array = response.data;
       sessionStorage.setItem("all_images", JSON.stringify(array));
     })
     .catch((error) => {
       alert(error);
     });
-
-  console.log(sessionStorage.getItem("category"));
 
   const arr1 = array.filter(
     (obj) => obj.category == sessionStorage.getItem("category")
