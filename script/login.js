@@ -21,7 +21,7 @@ $(document).ready(function () {
           sessionStorage.setItem("user_login_info", JSON.stringify(response));
           window.location.href = "search.html";
         } else {
-          alert("Enter correct credentials");
+          $("#form-status-1").html("Invalid Credentials");
         }
       },
       error: function (err) {},
@@ -51,18 +51,26 @@ $(document).ready(function () {
     var passMatch = passPattern.test(userpass);
     if (nameMatch == true) {
       var user_name = uName;
+      $("#name-error").hide();
     } else {
-      alert("Use only text in name");
+      $("#name-error").show();
+      $("#name-error").html("Use only text in name");
     }
     if (emailMatch == true) {
       var email = emailphone;
+      $("#email-error").hide();
     } else {
-      alert("Enter correct email id");
+      $("#email-error").show();
+      $("#email-error").html("Invalid email");
     }
     if (passMatch == true) {
+      $("#password-error").hide();
       var pass = userpass;
     } else {
-      alert("Enter valid password type");
+      $("#password-error").show();
+      $("#password-error").html(
+        "Password must contain: 1 letter caps, 1 letter small, 1 number, 1 special character"
+      );
     }
     event.preventDefault();
     if (
@@ -81,14 +89,14 @@ $(document).ready(function () {
         dataType: "json",
         contentType: "application/json",
         success: function (response) {
-          alert("Registered successfully");
+          $("#form-status").html("Resistration Success..!! Login to continue.");
         },
         error: function (error) {
-          alert(error);
+          $("#form-status").html("Network Error : Something went wrong.");
         },
       });
     } else {
-      alert("please enter correct details to continue");
+      $("#form-status").html("Something went wrong.");
     }
   });
 });

@@ -214,4 +214,15 @@ a {
 .foot-lnk {
   text-align: center;
 }
+
+.form-label-error {
+  color: white;
+  font-size: small;
+  font-weight: 200;
+}
+
+input {
+  outline: none;
+}
+
 /*# sourceMappingURL=login.css.map */
