@@ -8,7 +8,6 @@ const fetchCommets = async () => {
   await axios
     .get("http://localhost:3000/comments/")
     .then((response) => {
-      console.log(response.data);
       array = response.data;
     })
     .catch((error) => {

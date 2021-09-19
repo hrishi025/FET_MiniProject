@@ -24,7 +24,7 @@ const fetchLogs = async () => {
         columns: [
           { title: "Image Name" },
           { title: "Type" },
-          { title: "Comment" },
+          { title: "info" },
           { title: "Date" },
         ],
       });

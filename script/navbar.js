@@ -44,5 +44,4 @@ $(document).ready(function () {
 $("#logout").click(function () {
   sessionStorage.clear();
   window.location.href = "home.html";
-  // window.location.replace("login.html");
 });
