@@ -221,11 +221,6 @@ button {
   cursor: default;
 }
 
-#view {
-  max-width: auto;
-  max-height: auto;
-}
-
 @media only screen and (max-width: 769px) {
   .container .custom-box {
     -webkit-box-orient: vertical;

@@ -130,7 +130,6 @@ header .nav_btn.active span:nth-child(3) {
 .nav .content_acc_detail .desc h2 {
   width: 100%;
   height: 70%;
-  vertical-align: center;
   display: inline-block;
   text-align: center;
   font-size: 15px;

@@ -1,7 +1,11 @@
 const url = "http://localhost:3000/";
 
 $(document).ready(function () {
-  const liked_images_array = fetch_liked_images();
+  if (sessionStorage.getItem("user_login_info") !== null) {
+    fetch_liked_images();
+  } else {
+    fetchImages([]);
+  }
 });
 
 const fetch_liked_images = async () => {

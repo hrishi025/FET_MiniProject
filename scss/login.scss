@@ -3,117 +3,94 @@ body {
   color: #6a6f8c;
   background: #c8c8c8;
   font: 600 16px/18px "Open Sans", sans-serif;
-  background-image: url("/images/Alabama.webp");
+  background-image: url("../html/pages/images/Alabama.webp");
   background-repeat: no-repeat;
   background-size: 100%;
 }
-* {
+
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-&:after {
-  box-sizing: border-box;
-}
-&:before {
-  box-sizing: border-box;
-}
+
 .clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-    display: block;
-  }
+  &:after,
   &:before {
     content: "";
     display: table;
   }
+
+  &:after {
+    clear: both;
+    display: block;
+  }
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 .login-wrap {
   width: 100%;
   margin: auto;
   max-width: 525px;
   min-height: 670px;
   position: relative;
-  background: url(/images/bg.jpg) no-repeat center;
+  background: url("../html/pages/images/bg.jpg") no-repeat center;
+  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
 .login-html {
   width: 100%;
   height: 100%;
   position: absolute;
   padding: 90px 70px 50px 70px;
   background: rgba(40, 57, 101, 0.9);
-  .sign-in-htm {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    transition: all 0.4s linear;
-  }
+
+  .sign-in-htm,
   .sign-up-htm {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     position: absolute;
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
   }
-  .sign-in {
-    display: none;
-    &:checked {
-      + {
-        .tab {
-          color: #fff;
-          border-color: #1161ee;
-          + {
-            .sign-up {
-              + {
-                .tab {
-                  + {
-                    .login-form {
-                      .sign-in-htm {
-                        transform: rotate(0);
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+
+  .sign-in,
   .sign-up {
     display: none;
-    &:checked {
-      + {
-        .tab {
-          color: #fff;
-          border-color: #1161ee;
-          + {
-            .login-form {
-              .sign-up-htm {
-                transform: rotate(0);
-              }
-            }
-          }
-        }
-      }
-    }
   }
-  .tab {
+}
+
+.login-form .group .check {
+  display: none;
+}
+
+.login-html .tab {
+  text-transform: uppercase;
+}
+
+.login-form .group {
+  .label,
+  .button {
     text-transform: uppercase;
+  }
+}
+
+.login-html {
+  .tab {
     font-size: 22px;
     margin-right: 15px;
     padding-bottom: 5px;
@@ -121,104 +98,133 @@ a {
     display: inline-block;
     border-bottom: 2px solid transparent;
   }
+
+  .sign-in:checked + .tab,
+  .sign-up:checked + .tab {
+    color: #fff;
+    border-color: #1161ee;
+  }
 }
+
 .login-form {
+  min-height: 345px;
+  position: relative;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
   .group {
-    .check {
-      display: none;
-      &:checked {
-        + {
-          label {
-            color: #fff;
-            .icon {
-              background: #1161ee;
-              &:before {
-                transform: scale(1) rotate(45deg);
-              }
-              &:after {
-                transform: scale(1) rotate(-45deg);
-              }
-            }
-          }
-        }
-      }
-    }
-    .label {
-      text-transform: uppercase;
-      width: 100%;
-      color: #fff;
-      display: block;
-      color: #aaa;
-      font-size: 12px;
-    }
-    .button {
-      text-transform: uppercase;
-      width: 100%;
-      color: #fff;
-      display: block;
-      border: none;
-      padding: 15px 20px;
-      border-radius: 25px;
-      background: rgba(255, 255, 255, 0.1);
-      background: #1161ee;
-    }
     margin-bottom: 15px;
-    .input {
+
+    .label,
+    .input,
+    .button {
       width: 100%;
       color: #fff;
       display: block;
+    }
+
+    .input,
+    .button {
       border: none;
       padding: 15px 20px;
       border-radius: 25px;
       background: rgba(255, 255, 255, 0.1);
     }
+
     input[data-type="password"] {
       -webkit-text-security: circle;
     }
-    label {
+
+    .label {
+      color: #aaa;
+      font-size: 12px;
+    }
+
+    .button {
+      background: #1161ee;
+    }
+
+    label .icon {
+      width: 15px;
+      height: 15px;
+      border-radius: 2px;
+      position: relative;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+
+      &:before,
+      &:after {
+        content: "";
+        width: 10px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        -webkit-transition: all 0.2s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s;
+      }
+
+      &:before {
+        left: 3px;
+        width: 5px;
+        bottom: 6px;
+        -webkit-transform: scale(0) rotate(0);
+        transform: scale(0) rotate(0);
+      }
+
+      &:after {
+        top: 6px;
+        right: 0;
+        -webkit-transform: scale(0) rotate(0);
+        transform: scale(0) rotate(0);
+      }
+    }
+
+    .check:checked + label {
+      color: #fff;
+
       .icon {
-        width: 15px;
-        height: 15px;
-        border-radius: 2px;
-        position: relative;
-        display: inline-block;
-        background: rgba(255, 255, 255, 0.1);
+        background: #1161ee;
+
         &:before {
-          content: "";
-          width: 10px;
-          height: 2px;
-          background: #fff;
-          position: absolute;
-          transition: all 0.2s ease-in-out 0s;
-          left: 3px;
-          width: 5px;
-          bottom: 6px;
-          transform: scale(0) rotate(0);
+          -webkit-transform: scale(1) rotate(45deg);
+          transform: scale(1) rotate(45deg);
         }
+
         &:after {
-          content: "";
-          width: 10px;
-          height: 2px;
-          background: #fff;
-          position: absolute;
-          transition: all 0.2s ease-in-out 0s;
-          top: 6px;
-          right: 0;
-          transform: scale(0) rotate(0);
+          -webkit-transform: scale(1) rotate(-45deg);
+          transform: scale(1) rotate(-45deg);
         }
       }
     }
   }
-  min-height: 345px;
-  position: relative;
-  perspective: 1000px;
-  transform-style: preserve-3d;
 }
+
+.login-html {
+  .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm,
+  .sign-up:checked + .tab + .login-form .sign-up-htm {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+
 .hr {
   height: 2px;
   margin: 60px 0 50px 0;
   background: rgba(255, 255, 255, 0.2);
 }
+
 .foot-lnk {
   text-align: center;
+}
+
+.form-label-error {
+  color: white;
+  font-size: small;
+  font-weight: 200;
+}
+
+input {
+  outline: none;
 }

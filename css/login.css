@@ -15,8 +15,7 @@ body {
   box-sizing: border-box;
 }
 
-.clearfix:after,
-.clearfix:before {
+.clearfix:after, .clearfix:before {
   content: "";
   display: table;
 }
@@ -38,10 +37,8 @@ a {
   min-height: 670px;
   position: relative;
   background: url("../html/pages/images/bg.jpg") no-repeat center;
-  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .login-html {
@@ -68,12 +65,18 @@ a {
 }
 
 .login-html .sign-in,
-.login-html .sign-up,
+.login-html .sign-up {
+  display: none;
+}
+
 .login-form .group .check {
   display: none;
 }
 
-.login-html .tab,
+.login-html .tab {
+  text-transform: uppercase;
+}
+
 .login-form .group .label,
 .login-form .group .button {
   text-transform: uppercase;
@@ -145,8 +148,7 @@ a {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.login-form .group label .icon:before,
-.login-form .group label .icon:after {
+.login-form .group label .icon:before, .login-form .group label .icon:after {
   content: "";
   width: 10px;
   height: 2px;
@@ -189,17 +191,7 @@ a {
   transform: scale(1) rotate(-45deg);
 }
 
-.login-html
-  .sign-in:checked
-  + .tab
-  + .sign-up
-  + .tab
-  + .login-form
-  .sign-in-htm {
-  -webkit-transform: rotate(0);
-  transform: rotate(0);
-}
-
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm,
 .login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
   -webkit-transform: rotate(0);
   transform: rotate(0);
@@ -224,5 +216,4 @@ a {
 input {
   outline: none;
 }
-
 /*# sourceMappingURL=login.css.map */
