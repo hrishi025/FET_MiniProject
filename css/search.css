@@ -241,4 +241,14 @@ button {
     font-size: 1em;
   }
 }
+
+#search_img_not_found {
+  border: 2px solid;
+  width: 80%;
+  height: 200px;
+  margin: auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
 /*# sourceMappingURL=search.css.map */

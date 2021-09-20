@@ -34,7 +34,10 @@ function insert_in_dream(array) {
   return output;
 }
 
-$(document).ready(fetchImages);
+$(document).ready(function () {
+  $("#search_img_not_found").hide();
+  fetchImages();
+});
 
 function view(image_id) {
   sessionStorage.setItem("image_id", image_id);
@@ -56,6 +59,13 @@ function search(result) {
         arr.push(result[i]);
     }
 
-    $(".dream").html(insert_in_dream(arr));
+    if (arr.length != 0) {
+      $(".dream").show();
+      $("#search_img_not_found").hide();
+      $(".dream").html(insert_in_dream(arr));
+    } else {
+      $(".dream").hide();
+      $("#search_img_not_found").show();
+    }
   }
 }
