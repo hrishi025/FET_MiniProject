@@ -45,4 +45,10 @@ h5 {
 #myTable {
   max-width: 100%;
 }
+
+.form-input-error {
+  color: red;
+  font-size: small;
+  text-align: end;
+}
 /*# sourceMappingURL=view.css.map */

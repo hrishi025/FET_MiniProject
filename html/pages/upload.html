@@ -57,10 +57,18 @@
         <!-- left column -->
         <div class="col-5">
           <label class="form-label">Photo Title</label>
-          <input id="photo_title" type="text" class="form-control" /><br />
+          <input id="photo_title" type="text" class="form-control" />
+          <div class="form-input-error">
+            <label id="error_photo_title"> Title is Mandatory</label>
+            <br />
+          </div>
 
           <label class="form-label">Photo Description</label>
-          <input id="photo_desc" type="text" class="form-control" /><br />
+          <input id="photo_desc" type="text" class="form-control" />
+          <div class="form-input-error">
+            <label id="error_photo_desc"> Description is Mandatory</label>
+            <br />
+          </div>
 
           <label class="form-label">Photo Category</label>
           <select
@@ -72,8 +80,12 @@
             <option value="Trees">Trees</option>
             <option value="Beach">Beach</option>
             <option value="Animal">Animal</option>
-            <option value="People">People</option></select
-          ><br />
+            <option value="People">People</option>
+          </select>
+          <div class="form-input-error">
+            <label id="error_photo_category"> Please select Category</label>
+            <br />
+          </div>
 
           <label class="form-label">Photo #tag</label>
           <br />
@@ -90,16 +102,30 @@
               />
             </div>
           </div>
-          <br />
+          <div class="form-input-error">
+            <label id="error_photo_hashtag"> Hashtag is Mandatory</label>
+            <br />
+          </div>
 
-          <input type="file" id="file" onchange="getImage(event)" />
+          <input
+            type="file"
+            id="file"
+            onclick="getImage(event)"
+            onchange="getImage(event)"
+          />
+          <div class="form-input-error">
+            <label id="error_file"> File must Be Selected</label>
+          </div>
         </div>
         <div class="col-1"></div>
 
         <!-- right column -->
         <div class="col-6" style="border: 1px solid black; text-align: center">
-          <img id="view-img-uploaded" width="100%" alt="uploaded-image" />
-          <p id="hide-after-show-image">uploaded image will appear hear</p>
+          <img
+            id="view-img-uploaded"
+            width="100%"
+            alt="uploaded-image will appear here"
+          />
         </div>
       </div>
       <div class="row">
