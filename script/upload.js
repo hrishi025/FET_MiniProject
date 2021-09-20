@@ -50,11 +50,13 @@ $("#upload-photo").click(function () {
         .post("http://localhost:3000/logs", log_obj, {
           "Content-Type": "application/json",
         })
+        .then(() => {
+          $("#upload-photo-success-div").show();
+          window.location.href = "./categories.html";
+        })
         .catch(() => {
           $("#upload-photo-error-div").show();
         });
-
-      window.location.href = "./categories.html";
     })
     .catch(() => {
       $("#upload-photo-error-div").show();
@@ -64,4 +66,5 @@ $("#upload-photo").click(function () {
 // when page gets loaded
 $(document).ready(() => {
   $("#upload-photo-error-div").hide();
+  $("#upload-photo-success-div").hide();
 });
